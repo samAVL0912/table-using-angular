@@ -1,0 +1,109 @@
+/* Container card styles */
+mat-card {
+  padding: 16px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title and button alignment */
+mat-card-title {
+  display: flex;
+  justify-content: space-between; /* Distributes space between elements */
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Button styling - moved to the right */
+button[mat-raised-button] {
+  margin-left: auto; /* Pushes the button to the right */
+  font-size: 14px;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: antiquewhite;
+}
+
+/* Table header styling */
+th {
+  text-align: left;
+  padding: 12px 16px;
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+/* Table rows and cells */
+td {
+  padding: 10px 16px;
+}
+
+/* Hover effect for table rows */
+tr:hover {
+  background-color: rgba(0, 151, 112, 0.07);
+}
+
+/* Action button styling */
+button[mat-icon-button] {
+  margin-right: 25px;
+  transition: background-color 0.3s ease;
+}
+
+/* Action button hover effects */
+button[mat-icon-button]:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Icon styling */
+mat-icon {
+  font-size: 20px;
+}
+.mat-mdc-raised-button:not(:disabled) {
+  color: var(--mdc-protected-button-label-text-color, var(--mat-app-primary));
+  background-color: var(--mdc-protected-button-container-color, var(--mat-app-surface));
+  position: absolute;
+  right: 15px;
+  top: 0px;}
+  .mat-toolbar {
+    background-color: #ff5722; /* Replace with your desired color */
+    color: white; /* Ensure text is readable */
+  }
+  
+  /* If you want to change the color of the buttons in the navbar */
+  .mat-toolbar button {
+    color: white;
+  }
+  
+  /* Optional: Change color on hover */
+  .mat-toolbar button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  /* add-edit-dialog.component.css or styles.css */
+
+/* Ensure the dialog actions are aligned correctly */
+.mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end; /* Aligns the buttons to the end of the dialog */
+  gap: 8px; /* Adds spacing between the buttons */
+  padding: 8px; /* Adds padding for better visual spacing */
+}
+
+/* Optional: Style the buttons to have consistent sizes */
+.mat-dialog-actions button {
+  min-width: 80px; /* Ensures buttons are not too small */
+  padding: 6px 16px; /* Adds padding inside the buttons */
+}
+
+/* Add some margin to avoid the buttons collapsing into each other */
+button {
+  margin: 0 4px; /* Adds margin to separate the buttons */
+}
+
+/* Hover effect for better user experience */
+button:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* Light hover effect */
+}
