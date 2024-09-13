@@ -1,0 +1,57 @@
+<mat-card>
+  <mat-card-title>
+    Users Table
+    <button mat-raised-button color="primary" (click)="addUser()">Add User</button>
+  </mat-card-title>
+ <!-- NEw code for gap -->
+ <mat-toolbar  color="primary">
+  <span>CRUD</span>
+  <span class="example-spacer"></span>
+  <section>
+    
+    <div class="example-button-row">
+      <button mat-raised-button (click)="openAddeditform()">Add data</button>
+    </div>
+  </section>
+
+<!-- new code end -->
+
+
+
+
+
+
+
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element"> {{ element.id }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{ element.name }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="age">
+      <th mat-header-cell *matHeaderCellDef> Age </th>
+      <td mat-cell *matCellDef="let element"> {{ element.age }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-icon-button color="accent" (click)="editUser(element)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="deleteUser(element.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</mat-card>
