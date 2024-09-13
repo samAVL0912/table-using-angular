@@ -1,0 +1,53 @@
+add-edit-dialog.component.css
+
+.mat-dialog-title {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .mat-dialog-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mat-dialog-content input {
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #e27575;
+    border-radius: 4px;
+    width: calc(100% - 20px);
+  }
+  
+  .mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  button {
+    margin-left: 10px;
+  }
+  /* add-edit-dialog.component.css or styles.css */
+
+/* Ensure the dialog actions are aligned correctly */
+.mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end; /* Aligns the buttons to the end of the dialog */
+  gap: 8px; /* Adds spacing between the buttons */
+  padding: 8px; /* Adds padding for better visual spacing */
+}
+
+/* Optional: Style the buttons to have consistent sizes */
+.mat-dialog-actions button {
+  min-width: 80px; /* Ensures buttons are not too small */
+  padding: 6px 16px; /* Adds padding inside the buttons */
+}
+
+/* Add some margin to avoid the buttons collapsing into each other */
+button {
+  margin: 0 4px; /* Adds margin to separate the buttons */
+}
+
+/* Hover effect for better user experience */
+button:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* Light hover effect */
+}
